@@ -1,0 +1,190 @@
+  <!-- -->
+<!-- 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+         <div id="wrapper">
+      <h1>Number guessing game</h1>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+    </br>
+        <form class="form">
+            <label2 for="guessField" id="guess">Guess a number</label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+        </form>
+
+        <div class="resultParas">
+            <p >Previous Guesses: <span class="guesses"></span></p>
+            <p >Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script>
+        const randomNum=parseInt(Math.random()*100+1)
+        const guess = document.querySelector('.guess');
+        const 
+    </script>
+    </body>
+    </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            width: auto;
+            height: 30px;
+            text-align: center;
+            background-color: rgb(74, 46, 51);
+            text-decoration: aliceblue;
+            text-shadow: blanchedalmond;
+            color: antiquewhite;
+        }
+        .num{
+            width: auto;
+            height: 40px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        form{
+         text-align: center;
+            background-color: #778899;
+            height: 150px;
+        }
+        .guessField{
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body style="background-color: #C0C0C0;">
+    <nav> <h1>Hello gamers</h1> </nav>
+    <h1 class="num">GUESS THE NUMBER</h1>
+    <form class="form">
+        <labe class="label" for="guessField" ><h2> guess a number</h2></label>
+            <input type="text" id="guessField" class="guessField">
+        <input type="submit" id="sub" value="submit guess">
+    </form>
+    <div>
+    <p>privious guess <span class="guesses"></span></p>
+    <p>guess Remaining <span class="lastResult">10</span></p>
+    <p class="result"></p>
+</div>
+<script>
+    const random =parseInt(Math.random()*10+1);
+    console.log(random);
+   const form = document.querySelector('.form');
+   const userInput =document.querySelector('.guessField');
+   const submit = document.querySelector('#sub');
+   const count = document.querySelector('.guesses');
+   const Remaining = document.querySelector('.lastResult');
+     const result = document.querySelector('.result');
+
+   let priguess=[];
+   let startguess=true;
+    
+   if( startguess){
+    submit.addEventListener('click',(e)=>{
+        e.preventDefault();
+        const guess=parseInt(userInput.value);
+        //console.log(guess);
+          validateguess(guess);
+    })
+}
+function validateguess(guess){
+  if(guess===""){
+    alert('please enter some num');
+  }
+  else if(guess<0){
+
+    alert('please enter valid num');
+  }
+  else if(guess>10){
+    alert('please enter valid num ');
+  }
+  else{
+      checkguess(guess);
+  }
+}
+function checkguess(guess){
+if(guess==random){
+   // alert(' congartulation you got right num');
+displaymessage(guess);
+}
+else if (guess<random){
+    alert('just small');
+}
+else if(guess>random){
+    alert(' just big')
+}
+}
+
+function displaymessage(random){
+result.innerHTML=` <h1> congratulation you won the Game : you guess the right Num(${random} )</h1>`
+}
+
+
+   
+
+//    let priviousguess = [];
+//    let startguess = 1;
+
+//    let startgame=true;
+//      if(startgame){
+//         submit.addEventListener('click',(e)=>{
+//             e.preventDefault();
+//             const guess = parseInt(guessField.value)
+//             console.log(guess)
+//             checkguess(guess)
+//         })
+//      }
+
+//    function guessnumber(){
+//     //
+//    }
+//     function submitguess(){
+//         //
+//     }
+//      function checkguess(){
+//         if(guess===""){
+//             alert("please enter a value ");
+
+//         } else if (guess<0 || guess>100){
+//             alert(" please enter value between 1 to 100")
+//         }
+//         else{
+//              priviousguess.push(guess);
+//              if(guess==="11"){
+//                 alert('<h1>Oop`s!..better luck next time  </h1>')
+                
+//                 endgame();
+//              }
+
+//         }
+//      }
+//      function verifyguess(){
+//         //
+//      }
+//      function priviousguess1(){
+//         //
+//      }
+
+//      function remaningguess(){
+//         // 
+//      }
+
+//      function result(){
+//         //
+//      }
+</script>
+</body>
+</html>
