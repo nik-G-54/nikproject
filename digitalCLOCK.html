@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalclock</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        #clock{
+            background-color: rgb(100, 222, 222);
+            color: black;
+            border: 2px solid black;
+            height: 60px;
+             width: 60px;
+             justify-content: center;
+             margin: 2px;
+             padding: 10px;
+             border-radius: 50%;
+             margin-left: 200px;
+             margin-top: 200px;
+            text-align: center ;
+        }
+        .heading{
+            background-color: rgb(139, 139, 161);
+             text-align: center;
+             margin: 5px;
+             padding: 3px;
+             border: 2px solid black;
+             height: 20px;
+             width: 150px;
+             margin-left: 180px;
+
+        }
+    </style>
+</head>
+<body>
+    <div><input type="text"> <input type="button" value="submit"> <input type="submit" value="submit yhe iteam"></div>
+    <div class="main">
+        
+        <div id="clock"></div>
+        <div class="heading">Real Time </div>
+    </div>
+    <script>
+        const clock=document.getElementById('clock');
+        setInterval(function(){ 
+        let date= new Date();
+       
+        
+           // clock.innerHTML= date.toLocaleTimeString();
+        
+        },1000);
+
+    </script>
+</body>
+</html>
