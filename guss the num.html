@@ -80,7 +80,7 @@
     <p class="result"></p>
 </div>
 <script>
-    const random =parseInt(Math.random()*10+1);
+    const random =parseInt(Math.random()*100+1);
     console.log(random);
    const form = document.querySelector('.form');
    const userInput =document.querySelector('.guessField');
@@ -108,7 +108,7 @@ function validateguess(guess){
 
     alert('please enter valid num');
   }
-  else if(guess>10){
+  else if(guess>100){
     alert('please enter valid num ');
   }
   else{
@@ -187,4 +187,5 @@ result.innerHTML=` <h1> congratulation you won the Game : you guess the right Nu
 //      }
 </script>
 </body>
+
 </html>
